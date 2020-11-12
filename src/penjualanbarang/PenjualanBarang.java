@@ -20,7 +20,7 @@ public class PenjualanBarang {
         System.out.println("                 Skin Care Oriflame Sweden                   ");
         System.out.println("            Jl. Guyub Rukun Bulusari Kedungwaru              ");
         System.out.println("                        Tulungagung                          ");
-        
+        System.out.println("-------------------------------------------------------------");
         
         System.out.println("\n");
         Scanner input = new Scanner(System.in);
@@ -47,22 +47,57 @@ public class PenjualanBarang {
 
         
         System.out.println("\n");
+        System.out.println("---------------------------------------------");
        
         //Memasukkan kode
         hasil = 0;
         boolean ulangi = true;
         while (ulangi){
-        System.out.println("---------------------------------------------");
-        System.out.print("Anda Beli Nomor   : ");
-        int pilihan = input.nextInt();
-        System.out.print("Jumlah            : ");
-        int jumlah = input.nextInt();
-        int total = harga[pilihan]*jumlah;
-        System.out.println("Total           : "+total);
-        hasil += total;
-        System.out.println("---------------------------------------------");
-                
-        
+        System.out.print("Masukkan Kode barang : ");
+        int kode = input.nextInt();
+        switch(kode){
+            case 1 :
+                System.out.println("Barang yang anda beli : Vitality Sheet Mask");
+                System.out.println("Harga sewa perhari : Rp. "+harga1);
+                System.out.print("Jumlah            : ");
+                int jumlah = input.nextInt();
+                int total = harga1*jumlah;
+                System.out.println("Total           : "+total);
+                hasil += total;
+                System.out.println("\n");
+                break;
+            case 2 :
+                System.out.println("Barang yang anda beli : Tender Care");
+                System.out.println("Harga sewa perhari : Rp. "+harga2);
+                System.out.print("Jumlah            : ");
+                jumlah = input.nextInt();
+                total = harga2*jumlah;
+                System.out.println("Total           : "+total);
+                hasil += total;
+                System.out.println("\n");
+                break;
+            case 3 :
+                System.out.println("Barang yang anda beli : Optimals Even Out");
+                System.out.println("Harga sewa perhari : Rp. "+harga3);
+                System.out.print("Jumlah            : ");
+                jumlah = input.nextInt();
+                total = harga3*jumlah;
+                System.out.println("Total           : "+total);
+                hasil += total;
+                System.out.println("\n");
+                break;
+            case 4 :
+                System.out.println("Barang yang anda beli : Optimals Hydra Radiance");
+                System.out.println("Harga sewa perhari : Rp. "+harga4);
+                System.out.print("Jumlah            : ");
+                jumlah = input.nextInt();
+                total = harga4*jumlah;
+                System.out.println("Total           : "+total);
+                hasil += total;
+                System.out.println("\n");
+                break;
+        }        
+        //Menambah barang
         System.out.println("Apakah anda ingin memesan lagi ? (ya/tidak)");
             String pilih = input.next();
             ulangi = pilih.equals("ya");
